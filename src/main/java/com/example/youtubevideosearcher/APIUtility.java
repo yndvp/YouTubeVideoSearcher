@@ -27,6 +27,7 @@ public class APIUtility {
         HttpResponse<String> response = client.send(httpRequest, HttpResponse.BodyHandlers.ofString());
 
         String jsonString = response.body();
+        System.out.println(jsonString);
 
         Gson gson = new Gson();
         APIResponse apiResponse = null;
