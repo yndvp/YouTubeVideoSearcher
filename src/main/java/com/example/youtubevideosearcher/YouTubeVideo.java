@@ -1,6 +1,4 @@
-package com.example.youtubevideosearcher.Models;
-
-import com.example.youtubevideosearcher.Models.Snippet;
+package com.example.youtubevideosearcher;
 
 import java.util.HashMap;
 
@@ -51,5 +49,5 @@ public class YouTubeVideo {
     /**
      * Method to convert object to string
      */
-    public String toString(){return String.format("%s %s", kind, etag);}
+    public String toString(){return String.format("%s", getSnippet());}
 }

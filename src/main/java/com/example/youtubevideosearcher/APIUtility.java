@@ -1,6 +1,5 @@
 package com.example.youtubevideosearcher;
 
-import com.example.youtubevideosearcher.Models.APIResponse;
 import com.google.gson.Gson;
 
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package com.example.youtubevideosearcher.Models;
+package com.example.youtubevideosearcher;
 
 import java.util.HashMap;
 

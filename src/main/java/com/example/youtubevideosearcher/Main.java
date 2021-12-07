@@ -1,7 +1,5 @@
 package com.example.youtubevideosearcher;
 
-import com.example.youtubevideosearcher.Models.APIResponse;
-
 import java.io.IOException;
 
 public class Main {
