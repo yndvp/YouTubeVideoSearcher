@@ -36,6 +36,7 @@ public class SearchViewController implements Initializable {
         if(apiResponse != null)
         {
             dataListView.getItems().addAll(apiResponse.getItems());
+            setVideoSelected(false);
         }
     }
 
@@ -45,11 +46,18 @@ public class SearchViewController implements Initializable {
                 (obs, oldVideo, videoSelected) -> {
                     try {
                         thumbnailImageView.setImage(new Image(videoSelected.getSnippet().getThumbnails().get("default").get("url")));
+                        setVideoSelected(true);
                     } catch (Exception e)
                     {
 
                     }
                 }
         );
+    }
+
+    private void setVideoSelected(boolean videoSelected)
+    {
+        detailButton.setVisible(videoSelected);
+        thumbnailImageView.setVisible(videoSelected);
     }
 }

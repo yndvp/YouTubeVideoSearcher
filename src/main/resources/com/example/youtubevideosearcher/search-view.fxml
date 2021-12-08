@@ -9,7 +9,7 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.youtubevideosearcher.Controllers.SearchViewController">
    <children>
-      <Label layoutX="147.0" layoutY="36.0" text="Video TItle" />
+      <Label layoutX="147.0" layoutY="36.0" text="Video Title" />
       <TextField fx:id="searchTextField" layoutX="225.0" layoutY="32.0" text="Enter Video Title" />
       <Button layoutX="411.0" layoutY="32.0" mnemonicParsing="false" onAction="#getSearchResults" text="Search" />
       <ListView fx:id="dataListView" layoutX="29.0" layoutY="100.0" prefHeight="229.0" prefWidth="371.0" />

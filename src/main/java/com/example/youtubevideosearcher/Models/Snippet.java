@@ -76,5 +76,5 @@ public class Snippet {
         this.publishTime = publishTime;
     }
 
-    public String toString(){return String.format("%s", getTitle());}
+    public String toString(){return String.format("%s", getTitle().trim().replace("&#39;", "'"));}
 }
