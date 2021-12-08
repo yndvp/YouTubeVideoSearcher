@@ -1,4 +1,4 @@
-package com.example.youtubevideosearcher;
+package com.example.youtubevideosearcher.Models;
 
 import java.util.HashMap;
 
@@ -75,4 +75,6 @@ public class Snippet {
     public void setPublishTime(String publishTime) {
         this.publishTime = publishTime;
     }
+
+    public String toString(){return String.format("%s", getTitle());}
 }

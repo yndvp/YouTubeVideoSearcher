@@ -1,4 +1,4 @@
-package com.example.youtubevideosearcher;
+package com.example.youtubevideosearcher.Models;
 
 
 import java.util.HashMap;
@@ -64,4 +64,5 @@ public class APIResponse {
     public void setItems(YouTubeVideo[] items) {
         this.items = items;
     }
+
 }
