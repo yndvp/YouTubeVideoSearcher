@@ -3,6 +3,9 @@ package com.example.youtubevideosearcher.Models;
 import java.util.HashMap;
 
 public class Snippet {
+    /**
+     * Instance variables
+     */
     private String publishedAt;
     private String channelId;
     private String title;
@@ -12,6 +15,9 @@ public class Snippet {
     private String liveBroadcastContent;
     private String publishTime;
 
+    /**
+     * Setters and Getters
+     */
     public String getPublishedAt() {
         return publishedAt;
     }

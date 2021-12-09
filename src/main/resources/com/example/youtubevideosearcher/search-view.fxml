@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 
-<AnchorPane prefHeight="500.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.youtubevideosearcher.Controllers.SearchViewController">
+<AnchorPane id="window" prefHeight="500.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.youtubevideosearcher.Controllers.SearchViewController">
    <children>
       <HBox layoutX="96.0" layoutY="32.0" spacing="10.0">
          <children>
@@ -18,7 +18,7 @@
          </children>
       </HBox>
       <ListView fx:id="dataListView" layoutX="46.0" layoutY="101.0" prefHeight="324.0" prefWidth="314.0" />
-      <ImageView id="image-view" fx:id="thumbnailImageView" fitHeight="119.0" fitWidth="174.0" layoutX="393.0" layoutY="204.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView id="imageView" fx:id="thumbnailImageView" fitHeight="119.0" fitWidth="174.0" layoutX="393.0" layoutY="204.0" pickOnBounds="true" preserveRatio="true" />
       <Button fx:id="detailButton" alignment="CENTER" contentDisplay="CENTER" layoutX="235.0" layoutY="449.0" mnemonicParsing="false" onAction="#getVideoDetails" prefHeight="30.0" prefWidth="130.0" text="View Details" textAlignment="CENTER" />
    </children>
 </AnchorPane>

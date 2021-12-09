@@ -10,4 +10,6 @@ module com.example.youtubevideosearcher {
     opens com.example.youtubevideosearcher.Controllers to com.google.gson, javafx.fxml;
     exports com.example.youtubevideosearcher.Models;
     exports com.example.youtubevideosearcher.Controllers;
+    exports com.example.youtubevideosearcher.Utilities;
+    opens com.example.youtubevideosearcher.Utilities to com.google.gson, javafx.fxml;
 }

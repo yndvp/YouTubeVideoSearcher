@@ -1,9 +1,9 @@
 package com.example.youtubevideosearcher.Controllers;
 
-import com.example.youtubevideosearcher.APIUtility;
+import com.example.youtubevideosearcher.Utilities.APIUtility;
 import com.example.youtubevideosearcher.Models.APIResponse;
 import com.example.youtubevideosearcher.Models.YouTubeVideo;
-import com.example.youtubevideosearcher.SceneChanger;
+import com.example.youtubevideosearcher.Utilities.SceneChanger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -31,6 +31,10 @@ public class SearchViewController implements Initializable {
     @FXML
     private ImageView thumbnailImageView;
 
+    /**
+     * This method is executed when user press the search button.
+     * This method populate objects data from API to list view
+     */
     @FXML
     private void getSearchResults() throws IOException, InterruptedException {
         dataListView.getItems().clear();
@@ -41,7 +45,10 @@ public class SearchViewController implements Initializable {
             setVideoSelected(false);
         }
     }
-
+    /**
+     * This method initialize the view. In this method, event listener is attached to data list view
+     * so that it can load thumbnail that matched with video
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         dataListView.getSelectionModel().selectedItemProperty().addListener(
@@ -57,14 +64,20 @@ public class SearchViewController implements Initializable {
         );
     }
 
+    /**
+     * This method decide visibility of elements depends if video is selected or not
+     */
     private void setVideoSelected(boolean videoSelected)
     {
         detailButton.setVisible(videoSelected);
-//        thumbnailImageView.setVisible(videoSelected);
+        thumbnailImageView.setVisible(videoSelected);
     }
 
+    /**
+     * This method is launched when user click view details button
+     */
     @FXML
-    void getVideoDetails(ActionEvent event) throws IOException, InterruptedException {
+    private void getVideoDetails(ActionEvent event) throws IOException, InterruptedException {
         YouTubeVideo video = dataListView.getSelectionModel().getSelectedItem();
         SceneChanger.changeScenes(event, "video-details-view.fxml", video);
     }
