@@ -3,6 +3,8 @@ package com.example.youtubevideosearcher.Controllers;
 import com.example.youtubevideosearcher.APIUtility;
 import com.example.youtubevideosearcher.Models.APIResponse;
 import com.example.youtubevideosearcher.Models.YouTubeVideo;
+import com.example.youtubevideosearcher.SceneChanger;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -58,6 +60,12 @@ public class SearchViewController implements Initializable {
     private void setVideoSelected(boolean videoSelected)
     {
         detailButton.setVisible(videoSelected);
-        thumbnailImageView.setVisible(videoSelected);
+//        thumbnailImageView.setVisible(videoSelected);
+    }
+
+    @FXML
+    void getVideoDetails(ActionEvent event) throws IOException, InterruptedException {
+        YouTubeVideo video = dataListView.getSelectionModel().getSelectedItem();
+        SceneChanger.changeScenes(event, "video-details-view.fxml", video);
     }
 }

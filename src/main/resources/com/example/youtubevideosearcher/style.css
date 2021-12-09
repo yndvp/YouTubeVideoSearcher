@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500&display=swap');
+
+.root
+{
+    -fx-background-color: #030303;
+    -fx-font-size: 16px;
+    -fx-font-family: 'Fira Sans', sans-serif;
+}
+#videoTitleLabel {
+    -fx-text-fill: #F9F9F9;
+    -fx-font-size: 18px;
+    -fx-font-family: 'Fira Sans', sans-serif;
+}
+.button {
+    -fx-background-color: #FF0000;
+    -fx-text-fill: #F9F9F9;
+}
+#imageView {
+    -fx-border-style: solid;
+    -fx-border-width: 10px;
+    -fx-border-color: #FF0000;
+}

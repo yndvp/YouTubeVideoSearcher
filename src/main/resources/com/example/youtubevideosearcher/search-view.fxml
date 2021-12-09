@@ -6,14 +6,19 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.youtubevideosearcher.Controllers.SearchViewController">
+<AnchorPane prefHeight="500.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.youtubevideosearcher.Controllers.SearchViewController">
    <children>
-      <Label layoutX="147.0" layoutY="36.0" text="Video Title" />
-      <TextField fx:id="searchTextField" layoutX="225.0" layoutY="32.0" text="Enter Video Title" />
-      <Button layoutX="411.0" layoutY="32.0" mnemonicParsing="false" onAction="#getSearchResults" text="Search" />
-      <ListView fx:id="dataListView" layoutX="29.0" layoutY="100.0" prefHeight="229.0" prefWidth="371.0" />
-      <ImageView fx:id="thumbnailImageView" fitHeight="150.0" fitWidth="142.0" layoutX="429.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true" />
-      <Button fx:id="detailButton" layoutX="274.0" layoutY="350.0" mnemonicParsing="false" text="View Details" />
+      <HBox layoutX="96.0" layoutY="32.0" spacing="10.0">
+         <children>
+            <Label id="videoTitleLabel" text="VIDEO TITLE" textAlignment="CENTER" />
+            <TextField fx:id="searchTextField" alignment="CENTER" text="Enter Video Title" />
+            <Button mnemonicParsing="false" onAction="#getSearchResults" text="Search" />
+         </children>
+      </HBox>
+      <ListView fx:id="dataListView" layoutX="46.0" layoutY="101.0" prefHeight="324.0" prefWidth="314.0" />
+      <ImageView id="image-view" fx:id="thumbnailImageView" fitHeight="119.0" fitWidth="174.0" layoutX="393.0" layoutY="204.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="detailButton" alignment="CENTER" contentDisplay="CENTER" layoutX="235.0" layoutY="449.0" mnemonicParsing="false" onAction="#getVideoDetails" prefHeight="30.0" prefWidth="130.0" text="View Details" textAlignment="CENTER" />
    </children>
 </AnchorPane>
