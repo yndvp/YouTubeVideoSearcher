@@ -35,7 +35,7 @@ public class Snippet {
     }
 
     public String getTitle() {
-        return title;
+        return title.replace("&#39;", "'").replace("&quot;","\"").replace("&amp;","&");
     }
 
     public void setTitle(String title) {
@@ -43,7 +43,7 @@ public class Snippet {
     }
 
     public String getDescription() {
-        return description;
+        return description.replace("&quot;","\"").replace("&amp;","&");
     }
 
     public void setDescription(String description) {
@@ -59,7 +59,7 @@ public class Snippet {
     }
 
     public String getChannelTitle() {
-        return channelTitle;
+        return channelTitle.replace("&#39;", "'").replace("&quot;","\"").replace("&amp;","&");
     }
 
     public void setChannelTitle(String channelTitle) {
@@ -82,5 +82,5 @@ public class Snippet {
         this.publishTime = publishTime;
     }
 
-    public String toString(){return String.format("%s", getTitle().replace("&#39;", "'").replace("&quot;","\""));}
+    public String toString(){return String.format("%s", getTitle());}
 }
